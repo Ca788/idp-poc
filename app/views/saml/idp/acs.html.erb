@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>SSO</title>
+  </head>
+  <body>
+    <%= form_tag @acs_url, method: :post, authenticity_token: false, id: "saml-acs" do %>
+      <%= hidden_field_tag "SAMLResponse", @saml_response %>
+      <%= hidden_field_tag "RelayState", @relay_state if @relay_state.present? %>
+      <noscript>
+        <button type="submit">Continuar</button>
+      </noscript>
+    <% end %>
+    <script>document.getElementById("saml-acs").submit();</script>
+  </body>
+</html>

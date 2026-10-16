@@ -1,0 +1,29 @@
+<h1>Entrar</h1>
+
+<% if @error.present? %>
+  <p><%= @error %></p>
+<% end %>
+
+<%= form_with url: login_path, method: :post, local: true do %>
+  <p>
+    <label>
+      Organização
+      <input type="text" name="organization_slug" value="<%= @organization_slug %>" required>
+    </label>
+  </p>
+  <p>
+    <label>
+      E-mail
+      <input type="email" name="email" value="<%= @email %>" required>
+    </label>
+  </p>
+  <p>
+    <label>
+      Senha
+      <input type="password" name="password" required>
+    </label>
+  </p>
+  <p>
+    <button type="submit">Continuar</button>
+  </p>
+<% end %>

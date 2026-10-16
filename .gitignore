@@ -1,0 +1,50 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all environment files (except examples).
+/.env*
+!/.env.example
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+/public/assets
+
+# Ignore key files for decrypting credentials and more.
+/config/*.key
+/config/master.key
+
+/tmp/cache/
+/tmp/cache/bootsnap
+
+# Ignore key files for decrypting credentials and more.
+/config/credentials/development.key
+/config/credentials/test.key
+
+# Ignore user-specific editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore locally generated Kamal secrets
+/.kamal/secrets
+
+# Ignore coverage
+/coverage
+/spec/examples.txt
